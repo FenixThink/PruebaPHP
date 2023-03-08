@@ -27,14 +27,14 @@ class DatabaseSeeder extends Seeder
         $paises = json_decode($data);
         foreach ($paises as $pais) {
             Country::create([
-                'name' => $pais->name->common,
+                'nameCountries' => $pais->name->common,
                 // Agrega otras propiedades que correspondan a la tabla de países.
             ]);
         }
         $categorys = ['Cliente','Proovedor','Funcionamiento Interno'];
         foreach ($categorys as $category) {
             Category::create([
-                'name' => $category,
+                'nameCategories' => $category,
                 // Agrega otras propiedades que correspondan a la tabla de países.
             ]);
         }

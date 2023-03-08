@@ -17,23 +17,23 @@ use App\Http\Controllers\UserController;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+// Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
 
-Route::group([
-    'prefix' => 'category',
-], function () {
-    Route::get('allIndex',[CategoryController::class, 'index']);
-});
-Route::group([
-    'prefix' => 'country',
-], function () {
-    Route::get('allIndex',[CountryController::class, 'index']);
-});
-Route::group([
-    'prefix' => 'user',
-], function () {
-    Route::get('allIndex',[UserController::class, 'index']);
-    Route::post('store',[UserController::class, 'store']);
-});
+// Route::group([
+//     'prefix' => 'category',
+// ], function () {
+//     Route::get('allIndex',[CategoryController::class, 'index']);
+// });
+// Route::group([
+//     'prefix' => 'country',
+// ], function () {
+//     Route::get('allIndex',[CountryController::class, 'index']);
+// });
+// Route::group([
+//     'prefix' => 'user',
+// ], function () {
+//     Route::get('allIndex',[UserController::class, 'index']);
+//     Route::post('store',[UserController::class, 'store']);
+// });

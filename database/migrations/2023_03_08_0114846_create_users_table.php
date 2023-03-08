@@ -17,10 +17,10 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('last_name');
-            $table->string('email');
+            $table->string('email')->unique();
             $table->string('address');
-            $table->string('cellphone');
-            $table->string('CC');
+            $table->string('cellphone',11);
+            $table->string('CC',10)->unique();
             $table->unsignedBigInteger('id_category');
             $table->unsignedBigInteger('id_country');
             $table->foreign('id_category')->references('id')->on('categories')->onDelete('cascade');

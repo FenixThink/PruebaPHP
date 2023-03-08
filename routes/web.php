@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +18,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+// Route::resource('/users', UserController::class);
+Route::get('/users/',[UserController::class,'index']);
+Route::POST('/users/',[UserController::class,'store']);
+Route::DELETE('/users/:id',[UserController::class,'destroy']);
+// Route::get('/users/create');
+// Route::resource('users', 'UserController');

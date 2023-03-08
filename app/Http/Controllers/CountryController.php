@@ -11,10 +11,10 @@ class CountryController extends Controller
     {
         try{
             $request->validate([
-                'name' => 'required|string',
+                'nameCountries' => 'required|string',
             ]);
             $country=Country::Create([
-                'name' => $request-> name,
+                'nameCountries' => $request-> nameCountries,
                 ]);
             return response()->json([
                 'message'=> $country

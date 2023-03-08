@@ -21,10 +21,10 @@ class CategoryController extends Controller
     {
         try{
             $request->validate([
-                'name' => 'required|string',
+                'nameCategories' => 'required|string',
             ]);
             $category=Category::Create([
-                'name' => $request-> name,
+                'nameCategories' => $request-> nameCategories,
                 ]);
             return response()->json([
                 'message'=> $category
